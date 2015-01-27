@@ -135,31 +135,24 @@
     CGFloat xoffset=IS_IPAD()?40: 20;
     CGSize size=CGSizeMake(IS_IPAD()?(scrollContent.width-xoffset*2)/2:200,IS_IPAD()? 384: 400);
     scrollContent.contentSize=CGSizeMake(scrollContent.width, size.height*lineCount*1.0);
-    
     if (images.count==0) {
-        
-        if(testID==1){
-        
+        if (scrollDir.subviews.count == 1)
+        {
+            [scrollDir.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        }
             if (!titleLs) {
                 
                 titleLs  =[[UILabel alloc]initWithFrame:CGRectMake(10, 10, scrollContent.frame.size.width,30)];
+                titleLs.center = scrollContent.center;
             }
        
-        titleLs.text=@"您没有可浏览的手册";
+        titleLs.text=@"您没有可浏览的手册...";
         titleLs.center=CGPointMake(scrollContent.frame.size.width/2, scrollContent.frame.size.height/2);
         titleLs.font=SysFont(17);
-        titleLs.textColor=[UIColor grayColor];
+        titleLs.textColor=[UIColor colorWithHexString:@"#6b6b6b"];
         titleLs.backgroundColor=[UIColor clearColor];
         titleLs.textAlignment=NSTextAlignmentCenter;
         [scrollContent addSubview:titleLs];
-        
-        }else
-        {
-            
-            titleLs.hidden=YES;
-            
-            
-        }
         
     }else
     {
