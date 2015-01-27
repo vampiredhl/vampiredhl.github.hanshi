@@ -1,0 +1,21 @@
+//
+//  hanshi.pch
+//  hanshi
+//
+//  Created by wujin on 14/12/20.
+//  Copyright (c) 2014年 dqjk. All rights reserved.
+//
+
+#ifndef hanshi_hanshi_pch
+#define hanshi_hanshi_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+@import UIKit;
+#import "Constants.h"
+#import "Models/Models.h"
+#import "Protocols/Protocols.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
+#import "HSImageView.h"
+#endif
