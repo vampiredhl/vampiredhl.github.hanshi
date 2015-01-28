@@ -174,8 +174,10 @@ typedef id(^CreateView)(NSInteger tag,CGRect frame);
         label.font = SysFont(17);
         label.text = @"暂无数据";
         [scroll addSubview:label];
+        scroll.scrollEnabled = NO;
         return;
     }
+    scroll.scrollEnabled = YES;
 	NSUInteger rows=ceilf(arrayImages.count/count);
 	for (int i=0; i<rows; i++) {
 		for (int j=0; j<count; j++) {

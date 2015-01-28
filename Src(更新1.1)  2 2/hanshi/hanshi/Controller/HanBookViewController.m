@@ -135,8 +135,8 @@
     CGFloat xoffset=IS_IPAD()?40: 20;
     CGSize size=CGSizeMake(IS_IPAD()?(scrollContent.width-xoffset*2)/2:200,IS_IPAD()? 384: 400);
     scrollContent.contentSize=CGSizeMake(scrollContent.width, size.height*lineCount*1.0);
-    images = nil;
-    if (images.count==0) {
+
+    if (images.count==0 && scrollDir.subviews.count == 0) {
         if (scrollDir.subviews.count == 1)
         {
             [scrollDir.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
@@ -167,10 +167,10 @@
         titleLs2.textAlignment=NSTextAlignmentCenter;
         [scrollContent addSubview:titleLs2];
 
-        
+        scrollContent.scrollEnabled = NO;
     }else
     {
-        
+        scrollContent.scrollEnabled = YES;
         
         for (int i=0; i<lineCount; i++) {
             for (int j=0; j<count; j++) {
