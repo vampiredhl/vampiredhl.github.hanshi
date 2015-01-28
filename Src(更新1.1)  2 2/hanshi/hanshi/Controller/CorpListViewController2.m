@@ -163,6 +163,10 @@ typedef id(^CreateView)(NSInteger tag,CGRect frame);
 	//计算行数
     if (arrayImages.count == 0 || arrayCats.count == 0)
     {
+        if(arrayCats.count == 1)
+        {
+            [scrollCat.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        }
         UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(0, scroll.height/2-30, scroll.width, 30)];
         label.textColor = [UIColor colorWithHexString:@"#6b6b6b"];
         label.backgroundColor = [UIColor clearColor];
