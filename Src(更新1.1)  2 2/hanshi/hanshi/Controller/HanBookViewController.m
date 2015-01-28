@@ -135,6 +135,7 @@
     CGFloat xoffset=IS_IPAD()?40: 20;
     CGSize size=CGSizeMake(IS_IPAD()?(scrollContent.width-xoffset*2)/2:200,IS_IPAD()? 384: 400);
     scrollContent.contentSize=CGSizeMake(scrollContent.width, size.height*lineCount*1.0);
+    images = nil;
     if (images.count==0) {
         if (scrollDir.subviews.count == 1)
         {
@@ -153,6 +154,19 @@
         titleLs.backgroundColor=[UIColor clearColor];
         titleLs.textAlignment=NSTextAlignmentCenter;
         [scrollContent addSubview:titleLs];
+
+        
+        UILabel *titleLs2  =[[UILabel alloc]initWithFrame:CGRectMake(10, 10, scrollContent.frame.size.width,30)];
+            titleLs2.center = scrollContent.center;
+        
+        titleLs2.text=@"请联系：400-820-2957";
+        titleLs2.center=CGPointMake(scrollContent.frame.size.width/2, scrollContent.frame.size.height/2+20);
+        titleLs2.font=SysFont(17);
+        titleLs2.textColor=[UIColor colorWithHexString:@"#6b6b6b"];
+        titleLs2.backgroundColor=[UIColor clearColor];
+        titleLs2.textAlignment=NSTextAlignmentCenter;
+        [scrollContent addSubview:titleLs2];
+
         
     }else
     {

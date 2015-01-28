@@ -161,6 +161,17 @@ typedef id(^CreateView)(NSInteger tag,CGRect frame);
 	float count=IS_IPAD()?3: 2;
 	CGSize elemenSize=CGSizeMake(scroll.width/count, IS_IPAD()?210:110);
 	//计算行数
+    if (arrayImages.count == 0 || arrayCats.count == 0)
+    {
+        UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(0, scroll.height/2-30, scroll.width, 30)];
+        label.textColor = [UIColor colorWithHexString:@"#6b6b6b"];
+        label.backgroundColor = [UIColor clearColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.font = SysFont(17);
+        label.text = @"暂无数据";
+        [scroll addSubview:label];
+        return;
+    }
 	NSUInteger rows=ceilf(arrayImages.count/count);
 	for (int i=0; i<rows; i++) {
 		for (int j=0; j<count; j++) {
