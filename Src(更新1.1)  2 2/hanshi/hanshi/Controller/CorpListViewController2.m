@@ -86,6 +86,10 @@ typedef id(^CreateView)(NSInteger tag,CGRect frame);
                     [arrayCats addObject:mb];
                 }
             }
+            if (arrayCats.count == 4)
+            {
+                [arrayCats exchangeObjectAtIndex:1 withObjectAtIndex:3];
+            }
         }else
         {
             //            [arrayCats addObjectsFromArray:lParam.array];
