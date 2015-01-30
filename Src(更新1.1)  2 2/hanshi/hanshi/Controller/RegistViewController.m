@@ -64,7 +64,6 @@
     
     
     
-
     
     
     
@@ -213,7 +212,7 @@
     
     UIView *bgView=[[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(titleLs5.frame), 320, 60)];
     bgView.backgroundColor=[UIColor clearColor];
-    bgView.center=CGPointMake(kDScreenWidth/2,IS_IPAD() ? CGRectGetMaxY(titleLs5.frame)+20 : CGRectGetMaxY(titleLs5.frame)+20);
+    bgView.center=CGPointMake(kDScreenWidth/2,IS_IPAD() ? CGRectGetMaxY(titleLs5.frame)+40 : CGRectGetMaxY(titleLs5.frame)+40);
     bgView.userInteractionEnabled=YES;
     [_scrollView addSubview:bgView];
     
@@ -222,7 +221,7 @@
     for (int i=0; i<2; i++) {
         
         
-        NSArray *imageBnt=@[@"btn_agree.png",@"btn_quit.png"];
+        NSArray *imageBnt=@[@"同意",@"返回"];
         for (int i=0; i<2; i++) {
             
             UIButton *button=[UIButton buttonWithType:UIButtonTypeCustom];
@@ -230,17 +229,20 @@
             
             if (i==0) {
             
-                button.frame=CGRectMake(IS_IPAD()?10 : x+10,15, IS_IPAD()? 120: 68,30);
+                button.frame=CGRectMake(IS_IPAD()?40 : 40,15, IS_IPAD()? 89: 89,30);
             }else
             {
-                button.frame=CGRectMake(IS_IPAD() ? 190: 157+10,15,IS_IPAD()? 120 :68,30);
+                button.frame=CGRectMake(IS_IPAD() ? 191: 191,15,IS_IPAD()? 89 :89,30);
             }
             
             
-            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            [button setBackgroundImage:[UIImage imageNamed:[imageBnt objectAtIndex:i]] forState:UIControlStateNormal];
-            button.titleLabel.font=[UIFont boldSystemFontOfSize:15];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [button setTitle:[imageBnt objectAtIndex:i] forState:UIControlStateNormal];
+            [button setBackgroundImage:[[UIImage imageNamed:@"btn_sc_bg.jpg"]stretchableImageWithLeftCapWidth:5 topCapHeight:0 ] forState:UIControlStateNormal];
+            button.titleLabel.font=[UIFont boldSystemFontOfSize:18];
             button.tag=100+i;
+            button.layer.masksToBounds=YES;
+            button.layer.cornerRadius=4;
             [button addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
             [bgView addSubview:button];
             
@@ -448,6 +450,9 @@ static int flag = 0;
     [self creatUI];
     
     [self.view addSubview:viewSm];
+    
+    
+    
 
     
     
