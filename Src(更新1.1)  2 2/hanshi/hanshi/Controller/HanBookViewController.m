@@ -158,7 +158,7 @@
         
         UILabel *titleLs2  =[[UILabel alloc]initWithFrame:CGRectMake(10, 10, scrollContent.frame.size.width,30)];
         titleLs2.text=@"请联系：400-820-2957";
-        titleLs2.center=CGPointMake(scrollContent.frame.size.width/2+10, scrollContent.frame.size.height/2+20);
+        titleLs2.center=CGPointMake(scrollContent.frame.size.width/2, scrollContent.frame.size.height/2+20);
         titleLs2.font=SysFont(17);
         titleLs2.textColor=[UIColor colorWithHexString:@"#6b6b6b"];
         titleLs2.backgroundColor=[UIColor clearColor];
