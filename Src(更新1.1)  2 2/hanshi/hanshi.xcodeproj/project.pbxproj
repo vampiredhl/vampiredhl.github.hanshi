@@ -861,11 +861,11 @@
 				ORGANIZATIONNAME = dqjk;
 				TargetAttributes = {
 					642DA2251A5E443800A98509 = {
-						DevelopmentTeam = AP85T4SWFA;
+						DevelopmentTeam = MQ9XX5TTTN;
 					};
 					646E50B31A450F6F00777448 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = UHQ6LU7EN4;
+						DevelopmentTeam = MQ9XX5TTTN;
 					};
 				};
 			};
@@ -1209,8 +1209,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
 				GCC_PREFIX_HEADER = hanshi/hanshi.pch;
 				INFOPLIST_FILE = "hanshi copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1223,7 +1223,7 @@
 					"$(BUILT_PRODUCTS_DIR)/libSDWebImage.a",
 				);
 				PRODUCT_NAME = "hanshi-iPad";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a6f606ea-cafd-49db-9ae7-33e852b1c24b";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -1233,8 +1233,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
 				GCC_PREFIX_HEADER = hanshi/hanshi.pch;
 				INFOPLIST_FILE = "hanshi copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1247,7 +1247,7 @@
 					"$(BUILT_PRODUCTS_DIR)/libSDWebImage.a",
 				);
 				PRODUCT_NAME = "hanshi-iPad";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a6f606ea-cafd-49db-9ae7-33e852b1c24b";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
@@ -1269,8 +1269,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shengwei Ding (434YR5H3BA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shengwei Ding (434YR5H3BA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1292,10 +1292,10 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(OBJROOT)/UninstalledProducts/include",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "a2b08991-87ea-4397-a195-dd24a79d0f41";
+				PROVISIONING_PROFILE = "a6f606ea-cafd-49db-9ae7-33e852b1c24b";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1318,8 +1318,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Shengwei Ding (434YR5H3BA)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Shengwei Ding (434YR5H3BA)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1335,9 +1335,9 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(OBJROOT)/UninstalledProducts/include",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "a2b08991-87ea-4397-a195-dd24a79d0f41";
+				PROVISIONING_PROFILE = "a6f606ea-cafd-49db-9ae7-33e852b1c24b";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1350,6 +1350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = hanshi/hanshi.pch;
 				INFOPLIST_FILE = hanshi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1362,7 +1363,7 @@
 					"$(BUILT_PRODUCTS_DIR)/libSDWebImage.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a2b08991-87ea-4397-a195-dd24a79d0f41";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1373,6 +1374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = hanshi/hanshi.pch;
 				INFOPLIST_FILE = hanshi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1385,7 +1387,7 @@
 					"$(BUILT_PRODUCTS_DIR)/libSDWebImage.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a2b08991-87ea-4397-a195-dd24a79d0f41";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
