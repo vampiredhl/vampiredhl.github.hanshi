@@ -12,7 +12,7 @@
 /**
  服务器的地址
  */
-static NSString * const kServerHosts = @"http://115.47.49.111:8082/api/";
+static NSString * const kServerHosts = @"http://115.29.168.77/api/";
 
 /**
  判断设备是否为iPad
