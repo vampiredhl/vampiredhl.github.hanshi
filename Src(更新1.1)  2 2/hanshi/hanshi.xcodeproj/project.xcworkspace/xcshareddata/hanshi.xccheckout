@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>26D015D2-501A-449D-826B-5876D1B96FE2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>hanshi</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D6B25C28B7950664C9157F7932523AFE1D98ECF1</key>
+		<string>https://github.com/vampiredhl/vampiredhl.github.hanshi.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Src(更新1.1)  2 2/hanshi/hanshi.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D6B25C28B7950664C9157F7932523AFE1D98ECF1</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/vampiredhl/vampiredhl.github.hanshi.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D6B25C28B7950664C9157F7932523AFE1D98ECF1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D6B25C28B7950664C9157F7932523AFE1D98ECF1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>vampiredhl.github.hanshi</string>
+		</dict>
+	</array>
+</dict>
+</plist>
