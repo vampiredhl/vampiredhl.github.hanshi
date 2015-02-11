@@ -146,10 +146,11 @@
             [scrollDir.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         }else
         {
-            if (jilu_Dir_index == 0)
+            if (jilu_Dir_index == 0 && self.logoArr.count > 0)
             {
                 [self.logoArr removeObject:self.logoArr[0]];
                 [self _loadDir:self.logoArr];
+                return;
             }
         }
             if (!titleLs) {
