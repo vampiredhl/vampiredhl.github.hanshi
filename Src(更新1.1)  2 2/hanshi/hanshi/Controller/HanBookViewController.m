@@ -17,9 +17,11 @@
 	__weak IBOutlet UIScrollView *scrollContent;
 	__weak IBOutlet UIScrollView *scrollDir;
     
+    int jilu_Dir_index;
     int testID;
     UILabel*titleLs;
 }
+@property (nonatomic, strong) NSMutableArray *logoArr;
 @end
 @interface ProgressView : UIView{
 	UILabel *title;
@@ -67,7 +69,7 @@
 {
     [scrollDir.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
-    
+    self.logoArr = [NSMutableArray arrayWithArray:data];
     //左边按钮
     if (data.count==0) {
         
@@ -93,6 +95,7 @@
                 btn.frame=CGRectCenter(btn.frame, CGSizeMake(45, 45));
 //            }
             btn.associatedObjectRetain=c;
+            btn.tag = i+100;
             [btn sd_setBackgroundImageWithURL:URL(c.cpic) forState:UIControlStateNormal];
             [container addSubview:btn];
             UIView *line=[[UIView alloc] initWithFrame:CGRectMake(0, container.height-1, container.width, 1)];
@@ -111,6 +114,7 @@
 
 -(IBAction)btnDirTap:(UIButton*)sender
 {
+    jilu_Dir_index = (int)sender.tag-100;
 	Corp *c=sender.associatedObjectRetain;
 	[self loadContent:c.corpid];
 }
@@ -140,6 +144,13 @@
         if (scrollDir.subviews.count == 1)
         {
             [scrollDir.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        }else
+        {
+            if (jilu_Dir_index == 0)
+            {
+                [self.logoArr removeObject:self.logoArr[0]];
+                [self _loadDir:self.logoArr];
+            }
         }
             if (!titleLs) {
                 
@@ -287,7 +298,7 @@
 	dispatch_block_t download=^(){
 		HanBookAll *all=[HanBookAll protocolAutoRelease];
 		[all requestWithId:mgr.book.hbid SusessBlock:^(id lParam, id rParam) {
-			[sender setTitle:@"更新中..." forState:UIControlStateNormal];
+			[sender setTitle:@"下载中..." forState:UIControlStateNormal];
 			[mgr downloadWithList:lParam];
 		} FailBlock:^(id lParam, id rParam) {
 			
