@@ -51,7 +51,7 @@
 -(void)loadDir
 {
     
-    scrollDir.frame=CGRectMake(0, 50, 65, kDScreenHeight);
+    scrollDir.frame=CGRectMake(0, 50, 65, kDScreenHeight-50-49);
     scrollContent.frame=CGRectMake(CGRectGetMaxX(scrollDir.frame), 50, kDScreenWidth-CGRectGetMaxX(scrollDir.frame), kDScreenHeight-50-49);
     bgImage.frame=scrollContent.frame;
  
@@ -75,7 +75,25 @@
         
         
         testID=1;
+        titleLs  =[[UILabel alloc]initWithFrame:CGRectMake(10, 10, scrollContent.frame.size.width,30)];
+        titleLs.center = scrollContent.center;
+        titleLs.text=@"您没有可浏览的手册...";
+        titleLs.center=CGPointMake(scrollContent.frame.size.width/2, scrollContent.frame.size.height/2);
+        titleLs.font=SysFont(17);
+        titleLs.textColor=[UIColor colorWithHexString:@"#6b6b6b"];
+        titleLs.backgroundColor=[UIColor clearColor];
+        titleLs.textAlignment=NSTextAlignmentCenter;
+        [scrollContent addSubview:titleLs];
         
+        
+        UILabel *titleLs2  =[[UILabel alloc]initWithFrame:CGRectMake(10, 10, scrollContent.frame.size.width,30)];
+        titleLs2.text=@"请联系：400-820-2957";
+        titleLs2.center=CGPointMake(scrollContent.frame.size.width/2, scrollContent.frame.size.height/2+20);
+        titleLs2.font=SysFont(17);
+        titleLs2.textColor=[UIColor colorWithHexString:@"#6b6b6b"];
+        titleLs2.backgroundColor=[UIColor clearColor];
+        titleLs2.textAlignment=NSTextAlignmentCenter;
+        [scrollContent addSubview:titleLs2];
         
     }else
     {
@@ -177,7 +195,7 @@
         titleLs2.textAlignment=NSTextAlignmentCenter;
         [scrollContent addSubview:titleLs2];
 
-        scrollContent.scrollEnabled = NO;
+//        scrollContent.scrollEnabled = NO;
     }else
     {
         scrollContent.scrollEnabled = YES;
