@@ -29,7 +29,7 @@ NSString * const kHandBookMgrDownloadProgressOneCompleteNotification=@"kHandBook
 {
 	self=[super init];
 	if (self) {
-		dir=[NSString stringWithFormat:@"%@/Documents/books/%@/",NSHomeDirectory(),book.hbid];
+		dir=[NSString stringWithFormat:@"%@/Library/Caches/books/%@/",NSHomeDirectory(),book.hbid];
 		[self checkDir:dir];
 		hanbook=book;
 		self.maxConcurrentOperationCount=1;
