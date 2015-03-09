@@ -29,7 +29,7 @@ NSString * const kHandBookMgrDownloadProgressOneCompleteNotification=@"kHandBook
 {
 	self=[super init];
 	if (self) {
-		dir=[NSString stringWithFormat:@"%@/Library/Caches/books/%@/",NSHomeDirectory(),book.hbid];
+		dir=[NSString stringWithFormat:@"%@/Document/books/%@/",NSHomeDirectory(),book.hbid];
 		[self checkDir:dir];
 		hanbook=book;
 		self.maxConcurrentOperationCount=1;
@@ -105,6 +105,7 @@ NSString * const kHandBookMgrDownloadProgressOneCompleteNotification=@"kHandBook
 	self =[super initWithTarget:self selector:@selector(download:) object:url];
 	if (self) {
 		dir=savedir;
+        [self addSkipBackupAttributeToItemAtURL:[NSURL fileURLWithPath:dir]];
 	}
 	return self;
 }
@@ -122,8 +123,35 @@ NSString * const kHandBookMgrDownloadProgressOneCompleteNotification=@"kHandBook
 	if ([[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isdir]&&isdir==NO) {
 	}else{
 	NSData *data=[NSData dataWithContentsOfURL:uri];
-	[data writeToFile:path atomically:YES];
+    
+    NSURL *pathUrl = [NSURL fileURLWithPath:path];
+    
+    [self addSkipBackupAttributeToItemAtURL:pathUrl];
+        
+//	[data writeToFile:path atomically:YES];
+    [data writeToURL:pathUrl atomically:YES];
 	}
 	[[NSNotificationCenter defaultCenter] postNotificationName:kHandBookMgrDownloadProgressOneCompleteNotification object:self.noteObj];
 }
+
+- (BOOL)addSkipBackupAttributeToItemAtURL:(NSURL *)URL
+{
+//    assert([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]);
+    double version = [[UIDevice currentDevice].systemVersion doubleValue];//判定系统版本。
+    
+    if(version >=5.1f){
+        NSError *error = nil;
+        BOOL success = [URL setResourceValue: [NSNumber numberWithBool: YES]
+                                      forKey: NSURLIsExcludedFromBackupKey error: &error];
+        if(!success){
+            NSLog(@"Error excluding %@ from backup %@", [URL lastPathComponent], error);
+        }
+        return success;
+    }
+    return NO;
+}
+//- (void)addSkipBackupAttributeToPath:(NSString*)path {
+//    u_int8_t b = 1;
+//    setxattr([path fileSystemRepresentation], "com.apple.MobileBackup", &b, 1, 0, 0);
+//}
 @end
