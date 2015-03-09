@@ -1351,7 +1351,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
-				GCC_PREFIX_HEADER = hanshi/hanshi.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/hanshi.pch";
 				INFOPLIST_FILE = hanshi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1375,7 +1375,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
-				GCC_PREFIX_HEADER = hanshi/hanshi.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/hanshi.pch";
 				INFOPLIST_FILE = hanshi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

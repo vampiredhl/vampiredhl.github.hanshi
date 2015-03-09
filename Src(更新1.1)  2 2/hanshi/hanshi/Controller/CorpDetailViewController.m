@@ -69,7 +69,7 @@
 	[info requestWithId:self.corp.corpid SusessBlock:^(id lParam, id rParam) {
 		[self _loadHead:lParam];
 	} FailBlock:^(id lParam, id rParam) {
-		
+		lbDesc.text=@"";
 	}];
 	CorpMaterial *m=[CorpMaterial protocolAutoRelease];
 	[m requestWithId:self.corp.corpid SusessBlock:^(id lParam, id rParam) {
