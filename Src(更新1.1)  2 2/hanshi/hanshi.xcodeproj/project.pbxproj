@@ -1295,7 +1295,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "80d59912-4d62-463a-9966-e896d57983b8";
+				PROVISIONING_PROFILE = "469c1ce2-67b4-40b4-8adc-262c5a8223af";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1337,7 +1337,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "80d59912-4d62-463a-9966-e896d57983b8";
+				PROVISIONING_PROFILE = "469c1ce2-67b4-40b4-8adc-262c5a8223af";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1349,7 +1349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/hanshi.pch";
 				INFOPLIST_FILE = hanshi/Info.plist;
@@ -1363,7 +1363,7 @@
 					"$(BUILT_PRODUCTS_DIR)/libSDWebImage.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "80d59912-4d62-463a-9966-e896d57983b8";
+				PROVISIONING_PROFILE = "469c1ce2-67b4-40b4-8adc-262c5a8223af";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1373,7 +1373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yu Ren (MQ9XX5TTTN)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PRODUCT_NAME)/hanshi.pch";
 				INFOPLIST_FILE = hanshi/Info.plist;
@@ -1387,7 +1387,7 @@
 					"$(BUILT_PRODUCTS_DIR)/libSDWebImage.a",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "80d59912-4d62-463a-9966-e896d57983b8";
+				PROVISIONING_PROFILE = "469c1ce2-67b4-40b4-8adc-262c5a8223af";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
